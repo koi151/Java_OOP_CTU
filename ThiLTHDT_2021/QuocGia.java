@@ -12,6 +12,7 @@ public class QuocGia {
 		msqg = new String();
 		tenqg = new String();
 		tenthudo = new String();
+		GDP = 0.0f;
 	}
 	
 	public QuocGia(QuocGia q)
@@ -19,6 +20,12 @@ public class QuocGia {
 		this.msqg = new String(q.msqg);
 		this.tenqg = new String(q.tenqg);
 		this.tenthudo = new String(q.tenthudo);
+		this.GDP = q.GDP;
+	}
+	
+	public String layChauLuc()
+	{
+		return "";
 	}
 	
 	public float layGDP()
@@ -38,13 +45,20 @@ public class QuocGia {
 		
 		System.out.println("Nhap ten thu do");
 		this.tenthudo = sc.nextLine();
+		
+		System.out.println("Nhap GDP");
+		this.GDP = sc.nextFloat();
 	}
 	
 	public void in()
 	{
-		System.out.println("Ma so quoc gia: " + this.tenqg + " - Ten quoc gia: " + this.tenqg + " - Ten thu do: " + this.tenthudo);
+		System.out.println("Ma so quoc gia: " + this.tenqg + " - Ten quoc gia: " + this.tenqg + " - Ten thu do: " + this.tenthudo + " - GDP: " + this.GDP);
 	}
 	
+	public String toString()
+	{
+		return ("Ma so quoc gia: " + this.tenqg + " - Ten quoc gia: " + this.tenqg + " - Ten thu do: " + this.tenthudo + " - GDP: " + this.GDP);		
+	}
 	
 	public static void main(String[] args) {
 		
